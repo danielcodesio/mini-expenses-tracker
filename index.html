@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mini Expenses Tracker</title>
+</head>
+
+<body>
+    <main>
+        <div class="total-expenses">
+            <p>Total Expenses</p>
+            <h1 class="balance" id="balance">&#8369; 0.00</h1>
+        </div>
+        <form class="form-container" id="form-container">
+            <div class="add-expense">
+            <label for="expenseName">Add an expense</label>
+            <input type="text" id="expenseName" placeholder="e.g. Food" required>
+            <label for="amount">Add Amount</label>
+            <input type="number" id="amount" placeholder="e.g. 100" required>
+            </div>
+            <button id="add-btn " type="submit">&#43; Add Expense</button>
+        </form>
+        <div class="expense-history">
+            <h1>Expense History</h1>
+            <ul id="expenseList" class="expenseList"></ul>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

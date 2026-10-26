@@ -1,0 +1,167 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0B1120;
+    color: white;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+/* Total Expenses Card */
+.total-expenses {
+    background-color: #0F172A;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 25px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.total-expenses p {
+    color: #94A3B8;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.balance {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Add Expense Form */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #0F172A;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 25px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.add-expense {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.add-expense label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.add-expense input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    background-color: #1E293B;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.add-expense input:focus {
+    border-color: #3B82F6;
+}
+
+.add-expense input::placeholder {
+    color: #64748B;
+}
+
+/* Add Expense Button */
+.form-container button {
+    width: 100%;
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 13px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.form-container button:hover {
+    background-color: #1D4ED8;
+}
+
+/* Expense History */
+.expense-history {
+    background-color: #0F172A;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 25px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.expense-history h1 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.expenseList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Future dynamically generated expenses */
+.expenseList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background-color: #1E293B;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.expenseList li button {
+    padding: 7px 12px;
+    background-color: #7F1D1D;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.expenseList li button:hover {
+    background-color: #991B1B;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    main {
+        padding: 20px 12px;
+    }
+
+    .total-expenses,
+    .form-container,
+    .expense-history {
+        padding: 20px;
+    }
+
+    .balance {
+        font-size: 28px;
+    }
+}
